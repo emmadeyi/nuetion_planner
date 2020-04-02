@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <title>Nuetion Planner</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <h2 class="title app-title">Nuetion Planner</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m5 l5">
+                <div class="all-tasks">
+                    <h3 class="task-list-title">Activity List</h3>
+                    <ul class="task-list" data-list>
+
+                    </ul>
+                    <form action="" data-new-list-form>
+                        <div class="input-field">
+                            <label for="list_name" class="white-text text-darken-2 ">New list name</label>
+                            <input id="list_name" data-new-list-input type="text"
+                                class="validate white-text text-darken-2">
+                        </div>
+                        <button class="btn btn-small list right blue-grey" aria-label="creat new list">Add to
+                            list</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col s12 m7 l7">
+                <div class="container" data-list-display-container>
+                    <div class="card">
+                        <div class="list-title grey lighten-3 grey-text text-darken-2">
+                            <h5 class="" data-list-title>
+                                Youtube
+                            </h5>
+
+                            <span data-list-count class="badge blue-grey task-count white-text">
+                                3 task remaining
+                            </span>
+                        </div>
+                        <div class="card-content grey-text text-darken-2">
+                            <div class="todo-list">
+                                <div class="todo-body">
+                                    <div class="tasks grey-text text-darken-2" data-tasks>
+
+                                    </div>
+                                    <div class="new-task-creator">
+                                        <form action="" data-new-task-form>
+                                            <div class="input-field">
+                                                <label for="task_name" class="grey-text text-darken-2 ">New task
+                                                    name</label>
+                                                <input id="task_name" data-new-task-input type="text"
+                                                    class="validate grey-text text-darken-2">
+                                                <button class="btn btn-small task right blue-grey"
+                                                    aria-label="creat new list">Add
+                                                    task</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-div">
+                        <div>
+                            <span class="delete left" data-clear-complete-task-button>Clear completed tasks</span>
+                            <span class="delete right" data-delete-list-button>Delete List</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <template id="task-template">
+        <div class="task">
+            <p class="parent-task cross-task-name">
+                <label>
+                    <input type="checkbox" class="grey-text text-darken-2" />
+                    <span class="grey-text text-darken-2 task-name" data-task-name></span>
+                </label>
+                <!-- <i class="fa fa-chevron-circle-down expand-task right"></i> -->
+            </p>
+            <!-- <div class="task-action badge">
+                <span class=" btn btn-small blue lighten-2 small-text" title="more details">
+                    <i class="fa fa-info-circle"></i>
+                </span>
+                <span class=" btn btn-small orange lighten-2 small-text" title="edit task">
+                    <i class="fa fa-pen"></i>
+                </span>
+                <span class=" btn btn-small blue-grey blue-lighten-2 small-text" title="add to calendar">
+                    <i class="fa fa-calendar-plus"></i>
+                </span>
+                <span class=" btn btn-small teal lighten-2 small-text" title="set notification">
+                    <i class="fa fa-bell"></i>
+                </span>
+                <span class=" btn btn-small red lighten-2 small-text" title="delete">
+                    <i class="fa fa-trash"></i>
+                </span>
+            </div> -->
+        </div>
+    </template>
+
+
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
